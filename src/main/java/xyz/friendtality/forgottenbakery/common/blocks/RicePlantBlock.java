@@ -17,7 +17,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class RicePlantBlock extends DoublePlantBlock implements BonemealableBlock {
+public class RicePlantBlock extends DoublePlantBlock implements BonemealableBlock, SimpleWaterloggedBlock {
     public static final BooleanProperty WATELOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
     public static final int MAX_AGE = 7;
@@ -59,7 +59,7 @@ public class RicePlantBlock extends DoublePlantBlock implements BonemealableBloc
     }
 
     @Override
-    protected @NotNull VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return state.getValue(HALF) == DoubleBlockHalf.UPPER
                 ? SHAPE_BY_AGE[Math.min(4, state.getValue(AGE) + 1)]
                 : SHAPE_BY_AGE[Math.max(0, state.getValue(AGE) - 4)];
@@ -67,7 +67,7 @@ public class RicePlantBlock extends DoublePlantBlock implements BonemealableBloc
 
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return this.getShape(state,level,pos,context);
+        return Block.box(0,0,0,0 ,0,0);
 
     }
 
@@ -80,7 +80,7 @@ public class RicePlantBlock extends DoublePlantBlock implements BonemealableBloc
    }
 
     @Override
-    public @NotNull MapCodec<RicePlantBlock> codec() {
+    public MapCodec<RicePlantBlock> codec() {
         return FBBlockCodex.RICE_PLANT_BLOCK.value();
     }
 

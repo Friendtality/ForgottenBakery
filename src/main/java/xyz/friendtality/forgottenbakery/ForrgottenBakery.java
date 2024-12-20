@@ -20,15 +20,13 @@ public class ForrgottenBakery
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public ForrgottenBakery(IEventBus modEventBus, ModContainer modContainer)
-    {
-
+    public ForrgottenBakery(IEventBus modEventBus, ModContainer modContainer){
+        LOGGER.debug("Starting Forgotten Bakery Registration Progress");
         FBBlockCodex.register(modEventBus);
 
         FBItems.rgister(modEventBus);
         FBBlocks.register(modEventBus);
 
+        LOGGER.debug("Ending FB registration");
     }
-
-
 }
