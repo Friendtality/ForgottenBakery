@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "xyz.friendtality.forgottenbakery.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "structures.TrialChamberPicesMixin",
+    "gui.HudMixin"
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

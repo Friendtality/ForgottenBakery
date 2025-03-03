@@ -1,5 +1,6 @@
 package xyz.friendtality.forgottenbakery;
 
+import net.neoforged.bus.EventBus;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -10,6 +11,7 @@ import net.neoforged.fml.common.Mod;
 import xyz.friendtality.forgottenbakery.common.blocks.FBBlockCodex;
 import xyz.friendtality.forgottenbakery.common.blocks.FBBlocks;
 import xyz.friendtality.forgottenbakery.common.items.FBItems;
+import xyz.friendtality.forgottenbakery.common.mobeffects.FBMobEffects;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ForrgottenBakery.MODID)
@@ -26,6 +28,7 @@ public class ForrgottenBakery
 
         FBItems.rgister(modEventBus);
         FBBlocks.register(modEventBus);
+        FBMobEffects.register(modEventBus);
 
         LOGGER.debug("Ending FB registration");
     }

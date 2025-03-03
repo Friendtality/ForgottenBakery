@@ -1,3 +1,8 @@
 {
-  "item.forgottenbakery.rice_pinnacle" : "Rice Pinnacle"
+  "item.forgottenbakery.rice_pinnacle" : "Rice Pinnacle",
+  "item.forgottenbakery.tomato" : "Tomato",
+  "item.forgottenbakery.tomato_slice" : "Tomato Slice",
+  "item.forgottenbakery.lettuce" : "Lettuce",
+  "item.forgottenbakery.blt" : "BLT Sandwitch",
+  "item.forgottenbakery.lgbt" : "LGBT Sandwitch"
 }
