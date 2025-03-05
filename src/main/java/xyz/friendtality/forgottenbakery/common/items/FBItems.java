@@ -16,6 +16,8 @@ public class FBItems {
     public static final DeferredRegister.Items FB_ITEMS =
             DeferredRegister.createItems(MODID);
 
+    //Crops
+
     public static final DeferredItem RICE_PINNACLE =
             FB_ITEMS.register("rice_pinnacle", ()-> new Item(new Item.Properties()));
 
@@ -28,6 +30,11 @@ public class FBItems {
     public static final DeferredItem LETTUCE =
             FB_ITEMS.register("lettuce" ,()-> new ItemNameBlockItem(Blocks.DIRT,new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).build())));
+
+    //Items
+
+    public static final DeferredItem PORTABLE_JUKEBOX=
+            FB_ITEMS.register("portable_jukebox", ()-> new PortableJukebox(new Item.Properties()));
 
     public static void rgister(IEventBus eventBus){
         FB_ITEMS.register(eventBus);

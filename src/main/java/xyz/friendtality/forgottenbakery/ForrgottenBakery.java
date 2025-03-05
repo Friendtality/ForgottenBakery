@@ -11,6 +11,7 @@ import net.neoforged.fml.common.Mod;
 import xyz.friendtality.forgottenbakery.common.blocks.FBBlockCodex;
 import xyz.friendtality.forgottenbakery.common.blocks.FBBlocks;
 import xyz.friendtality.forgottenbakery.common.items.FBItems;
+import xyz.friendtality.forgottenbakery.common.menus.FBMenus;
 import xyz.friendtality.forgottenbakery.common.mobeffects.FBMobEffects;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -29,6 +30,7 @@ public class ForrgottenBakery
         FBItems.rgister(modEventBus);
         FBBlocks.register(modEventBus);
         FBMobEffects.register(modEventBus);
+        FBMenus.register(modEventBus);
 
         LOGGER.debug("Ending FB registration");
     }
